@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+</head>
+<body>
+{% for product in products %}
+    <p>{{ product.name }}</p>
+{% endfor %}
+</body>
+</html>
