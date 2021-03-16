@@ -11,6 +11,7 @@
 <body>
 {% for product in products %}
     <p>{{ product.name }}</p>
+    <img src="/media/{{ product.image }}" alt="">
 {% endfor %}
 </body>
 </html>
