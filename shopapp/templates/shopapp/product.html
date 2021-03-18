@@ -11,6 +11,8 @@
 <body>
 {% for product in products %}
     <p>{{ product.name }}</p>
+    <p>{{ product.price }}</p>
+    <p>{{ product.quantity }}</p>
     <img src="/media/{{ product.image }}" alt="">
 {% endfor %}
 </body>
