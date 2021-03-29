@@ -3,21 +3,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product</title>
-    <link href="{% static 'css/shop.css' %}" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Product</title>
+        <link href="{% static 'css/shop.css' %}" rel="stylesheet">
+    </head>
 <body>
+<div class="content">
     <ul class="nav">
         <li><a href="#" class="current">Main</a></li>
         <li><a href="#">Gallery</a></li>
     </ul>
-{% for product in products %}
-    <p>{{ product.name }}</p>
-    <p>{{ product.price }}</p>
-    <p>{{ product.quantity }}</p>
-{#    <img src="/media/{{ product.image }}" alt="">#}
-{% endfor %}
+    {% for product in products %}
+        <p>{{ product.name }}</p>
+        <p>{{ product.price }}</p>
+        <p>{{ product.quantity }}</p>
+    {#    <img src="/media/{{ product.image }}" alt="">#}
+    {% endfor %}
+</div>
+<footer>
+    <p> poopa </p>
+</footer>
 </body>
 </html>
