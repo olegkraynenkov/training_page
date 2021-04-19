@@ -15,6 +15,12 @@
         <li><a href="#">Gallery</a></li>
     </ul>
 
+    {% for category in categories %}
+
+    <a href="{% url 'shop:by_category' category.pk %}">{{ category.name }}</a>
+
+    {% endfor %}
+
     <div class="product-item">
     {% for product in products %}
     <img src="/media/{{ product.image }}" alt="">

@@ -4,7 +4,8 @@ from shopapp.models import Product, ProductCategory
 
 def product(request):
     products = Product.objects.all()
-    content = {'products': products}
+    categories = ProductCategory.objects.all()
+    content = {'products': products, 'categories': categories}
     return render(request, 'shopapp/product.html', content)
 
 
