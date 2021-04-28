@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('gallery/', include('mainapp.urls', namespace='gallery')),
-    path('shop/', include('shopapp.urls', namespace='shop'))
+    path('shop/', include('shopapp.urls', namespace='shop')),
+    path('auth/', include('authapp.urls', namespace='auth'))
 ]
 
 if settings.DEBUG:
