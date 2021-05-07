@@ -1,10 +1,10 @@
 from django.urls import path
 
-from authapp.views import auth
+from authapp.views import login
 
 
 app_name = 'authapp'
 
 urlpatterns = [
-    path('', auth, name='login'),
+    path('', login, name='login'),
 ]

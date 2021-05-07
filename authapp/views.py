@@ -4,7 +4,7 @@ from django.urls import reverse
 from authapp.forms import AuthUserLoginForm
 
 
-def auth(request):
+def login(request):
     title = 'вход'
 
     login_form = AuthUserLoginForm(data=request.POST)
@@ -18,4 +18,4 @@ def auth(request):
             return HttpResponseRedirect(reverse('index'))
 
     content = {'title': title, 'login_form': login_form}
-    return render(request, 'authapp/index.html', content)
+    return render(request, 'authapp/login.html', content)
