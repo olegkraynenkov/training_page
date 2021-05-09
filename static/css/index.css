@@ -1,13 +1,41 @@
-body {
+html, body {
     background: #c9f3c9;
+    margin: 0;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.nav {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    text-align: right;
+}
+
+.nav ul li{
+    display: inline;
+    margin-left: 10px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
 }
 
 .menu-main {
-    margin: 50px;
+    margin-top: 400px;
     font-size: 50px;
+    text-align: center;
 }
 
 .menu-main a {
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-decoration: none;
+    color: black;
 }
