@@ -10,7 +10,19 @@
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
 </head>
 <body>
-<a href="{% url 'gallery:index' %}">Gallery</a>
-<p>Rabotay Hueboba!</p>
+
+    <div class="nav">
+        <ul>
+            <li><a href="{% url 'auth:login' %}">Login</a></li>
+            <li><a href="{% url 'auth:register' %}">Sing up</a></li>
+            <li><a href="https://github.com/olegkraynenkov/training_page">Github</a></li>
+        </ul>
+
+    </div>
+
+    <div class="menu-main">
+        <a href="{% url 'gallery:index' %}">GALLERY</a>
+        <a href="{% url 'shop:index' %}">SHOP</a>
+    </div>
 </body>
 </html>
