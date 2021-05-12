@@ -20,8 +20,8 @@ def upload_to_gallery(request):
         if form.is_valid():
             form.save()
             img_obj = form.instance
-            content = {'title': title, 'img_obj': img_obj}
-            return  render(request, 'mainapp/upload_to_gallery.html', content)
-
-    return render(request, 'mainapp/upload_to_gallery.html', content)
+            return  render(request, 'mainapp/upload_to_gallery.html', {'form': form, 'img_obj': img_obj})
+    else:
+        form = PictureForm()
+    return render(request, 'mainapp/upload_to_gallery.html', {'form': form})
 
