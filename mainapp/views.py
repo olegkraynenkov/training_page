@@ -11,10 +11,7 @@ def gallery(request):
 
 
 def upload_to_gallery(request):
-    title = 'Upload page'
-    image_form = PictureForm()
 
-    content = {'title': title, 'image_form': image_form}
     if request.method == 'POST':
         form = PictureForm(request.POST, request.FILES)
         if form.is_valid():
