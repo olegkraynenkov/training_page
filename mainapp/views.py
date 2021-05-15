@@ -8,8 +8,9 @@ def index(request):
     return render(request, 'mainapp/index.html')
 
 def gallery(request):
-
-    return render(request, 'mainapp/gallery.html')
+    picture = Picture.objects.all()
+    content = {'picture': picture}
+    return render(request, 'mainapp/gallery.html', content)
 
 
 def upload_to_gallery(request):
