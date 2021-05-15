@@ -11,5 +11,10 @@
 </head>
 <body>
 <a href="{% url 'index' %}">main</a>
+
+    {% for picture in pictures %}
+        <img src="/media/{{ picture.image }}" alt="">
+    {% endfor %}
+
 </body>
 </html>

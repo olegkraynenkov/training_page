@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Picture
 
 from .forms import PictureForm
 
@@ -7,7 +8,9 @@ def index(request):
     return render(request, 'mainapp/index.html')
 
 def gallery(request):
-    return render(request, 'mainapp/gallery.html')
+    pictures = Picture.objects.all()
+    content = {'pictures': pictures}
+    return render(request, 'mainapp/gallery.html', content)
 
 
 def upload_to_gallery(request):
