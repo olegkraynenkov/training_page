@@ -13,7 +13,8 @@
 <a href="{% url 'index' %}">main</a>
 
     {% for picture in pictures %}
-        <img src="/media/{{ picture.image }}" alt="">
+        <img width="400" src="/media/{{ picture.image }}" alt="">
+        <p>{{ picture.comment }}</p>
     {% endfor %}
 
 </body>
