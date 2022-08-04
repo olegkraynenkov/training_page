@@ -11,8 +11,8 @@
 <body>
 <div class="content">
     <ul class="nav">
-        <li><a href="#" class="current">Main</a></li>
-        <li><a href="#">Gallery</a></li>
+        <li><a href="{% url 'index' %}" class="current">Main</a></li>
+        <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
     </ul>
 
     {% for category in categories %}
